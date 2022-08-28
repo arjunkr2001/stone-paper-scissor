@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            background-color: black;
+        }
+        .computer{
+            background-color: aqua;
+            display: grid;
+            place-items: center;
+            height: 50vh;
+            font-size: 10rem;
+        }
+        .player{
+            height: 50vh;
+            background-color:darkgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .scores{
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.2rem;
+            top: 50vh;
+            left: 50vw;
+            transform: translate(-50%,-50%);
+            /* background-color: aliceblue; */
+            /* height: 2rem; */
+        }
+        #result{
+            text-align: center;
+            background-color: aliceblue;
+            width: 10rem;
+            padding: 1rem;
+            border-radius: 5px;
+            font-family: 'Chelsea Market';
+        }
+        #playerScore{
+            text-align: center;
+            background-color: aliceblue;
+            width: 15rem;
+            padding: 1rem;
+            border-radius: 50px 5px 5px 50px;
+        }
+        #computerScore{
+            text-align: center;
+            background-color: aliceblue;
+            width: 15rem;
+            padding: 1rem;
+            border-radius: 5px 50px 50px 5px;
+        }
+        button{
+            border: none;
+            outline: none;
+            transition: 0.5s;
+        }
+        #stone{
+            font-size: 9rem;
+            background: rgba(0,0,0,0);
+        }
+        #paper{
+            font-size: 9rem;
+            background: rgba(0,0,0,0);
+        }
+        #scissor{
+            font-size: 9rem;
+            background: rgba(0,0,0,0);
+        }
+        #stone:focus{
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+        #paper:focus{
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+        #scissor:focus{
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+
+        @media(max-width:500px){
+            .computer{
+                background-color: bisque;
+                font-size: 10rem;
+            }
+            #stone{
+                font-size: 5rem;
+            }
+            #paper{
+                font-size: 5rem;
+            }
+            #scissor{
+                font-size: 5rem;
+            }
+            #playerScore{
+                width: min-content;
+                padding: 5px;
+            }
+            #result{
+                width: 8em;
+                padding: 5px;
+                height: 3em;
+                display: grid;
+                place-items: center;
+                margin: 2px;
+            }
+            #computerScore{
+                width: min-content;
+                padding: 5px;
+            }
+        }
